@@ -15,3 +15,4 @@ python checker.py https://example.com https://github.com
 pytest
 ```
 # trigger
+# retest email + dedup
