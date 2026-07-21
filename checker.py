@@ -69,3 +69,10 @@ def load_config(path: str) -> dict:
     import yaml
     with open(path) as f:
         return yaml.safe_load(f) or {}
+
+def thumbnail_preview(image_path: str, size: tuple = (128, 128)):
+    """Generate a small preview thumbnail for a downloaded asset."""
+    from PIL import Image
+    with Image.open(image_path) as img:
+        img.thumbnail(size)
+        return img
