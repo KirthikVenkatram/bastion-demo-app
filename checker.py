@@ -63,3 +63,9 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+def load_config(path: str) -> dict:
+    """Load optional YAML config for target URLs."""
+    import yaml
+    with open(path) as f:
+        return yaml.safe_load(f) or {}
